@@ -64,4 +64,6 @@ print("PORCENTAJE VICTORIAS: ", porcentajevictorias, "%" )
 print("CAMBIANDO ELECCIÓN: ", porcentajecambiando, "%")
 print("SIN CAMBIAR ELECCIÓN: ", porcentajeNOcambiando, "%")
 
+#CAMBIO EJERCICIO PUERTAS
+
 
