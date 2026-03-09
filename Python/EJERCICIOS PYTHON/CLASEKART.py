@@ -7,7 +7,7 @@ class Kart:
         self.boost = aceleración
 
     def acelerar(self):
-        try: self.boost += int(input("\nACELERANDO km/h: "))
+        try: self.boost = int(input("\nACELERANDO km/h: "))
         except ValueError: return f"INTRODUCE UN NÚMERO, CARBÓN"
         velfin = self.initvel + self.boost
         if velfin >= self.maxvel: velfin = self.maxvel
