@@ -1,12 +1,3 @@
-# Crea un programa que gestione una agenda de contactos
-# USANDO DICCIONARIO  donde:
-# - La clave es el nombre d ela persona
-# - El valor es su numero de teléfono, dirección, empleo
-# El programa debe permitir:
-# - Añadir un contacto nuevo
-# - Buscar un contacto por nombre
-# - Mostrar todos los contactos (ordenados alf)
-
 class agenda:
 
     def __init__(self, cellphone, address, rank):
