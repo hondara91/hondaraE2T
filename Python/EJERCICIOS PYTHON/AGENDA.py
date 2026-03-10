@@ -9,21 +9,40 @@
 
 class agenda:
 
-    def __init__(self, name):
-        self.nombre = name
-
-    def datos(self, cellphone, address, rank):
+    def __init__(self, cellphone, address, rank):
         self.movil = cellphone
         self.direccion = address
         self.empleo = rank
         
-    def añadirNOMBRE():
+    def añadirCONTACTO():
         for i in range(1, 1001):
-            i = agenda((input("INTRODUCE NOMBRE: ")))
-            x = input("DESEAS AÑADIR A ALGUIEN MÁS (S/N): ")
-            if x == "N": break
-            elif x == "S": pass
-            else: print("INTRODUCE UN COMANDO VÁLIDO")
+            i = (input("INTRODUCE NOMBRE: "))
+            num = int(input("INTRODUCE NÚMERO DE TELÉFONO: "))
+            add = input("INTRODUCE DIRECCIÓN: ")
+            rank = input("INTRODUCE EMPLEO: ")
+            i = agenda(num, add, rank)
+            Contactos = lista.append(i)
+            while True:
+                x = (input("DESEAS AÑADIR A ALGUIEN MÁS (S/N): ")).lower()
+                if x == "N": break
+                elif x == "S": continue
+                else: print("INTRODUCE UN COMANDO VÁLIDO")
 
-    def añadirDATOS(self):
+lista = []
+Contactos = []
         
+while True:
+
+    print("\nSeleccione una opción")
+    print("1. Para introducir un contacto")
+    print("2. Para buscar un contacto")
+    print("3. Para editar un contacto")
+    print("4. Eliminar contacto")
+    print("5. Para salir")
+
+    opcion = int(input("\n-----------------------------\nINTRODUCE UNA OPCIÓN: "))
+
+    if opcion == 1: agenda.añadirCONTACTO()
+
+    for i in Contactos:
+        print(i)

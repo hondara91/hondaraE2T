@@ -1,15 +1,21 @@
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
+
 client = MongoClient('mongodb://localhost:27017')
 db = client['mibase']
 collection = db['productos']
 
+
+for producto in collection.find():
+    print(producto)
+
 while True:
 
-    print("Seleccione una opción")
+    print("\nSeleccione una opción")
     print("1. Para introducir un artículo")
     print("2. Para buscar un artículo")
     print("3. Para actualizar producto")
+    print("4. Eliminar producto")
     print("5. Para salir")
 
     opcion = int(input("\n-----------------------------\nINTRODUCE UNA OPCIÓN: "))
@@ -42,7 +48,7 @@ while True:
     elif opcion == 2:
 
         articulo_buscar = input("INTRODUZCA EL NOMBRE DEL ARTÍCULO: ")
-        articulos = db.productos.find({"nombre": articulo_buscar.lower()})
+        articulos = collection.find({"nombre": articulo_buscar})
 
         for articulo in articulos:
             print(articulo)
@@ -51,6 +57,6 @@ while True:
 
         articulo_buscar = input("INTRODUZCA EL NOMBRE DEL ARTÍCULO: ")
         precio = float(input("INTRODUCE PRECIO: "))
-        db.productos.update_one({"nombre": articulo_buscar.lower()}, {"$set": {"precio": precio}})
+        db.productos.update_one({"nombre": articulo_buscar}, {"$set": {"precio": precio}})
 
     elif opcion == 5: break
