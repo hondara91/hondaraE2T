@@ -45,3 +45,4 @@ while True:
     elif y == 3: print(Kart.datos(x))
     else: ("\nELIGE UNA OPCIÓN VALIDA")
     
+S

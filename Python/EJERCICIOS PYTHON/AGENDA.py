@@ -7,25 +7,31 @@
 # - Buscar un contacto por nombre
 # - Mostrar todos los contactos (ordenados alf)
 
-class agenda:
+class Agenda:
 
-    def __init__(self, cellphone, address, rank):
-        self.movil = cellphone
-        self.direccion = address
-        self.empleo = rank
-    
-    def __str__(self): return str(self.movil, self.direccion, self.empleo)
-        
-    def añadirCONTACTO():
-        x = input("INTRODUCE NOMBRE: ")
-        num = int(input("INTRODUCE NÚMERO DE TELÉFONO: "))
-        add = input("INTRODUCE DIRECCIÓN: ")
-        rank = input("INTRODUCE EMPLEO: ")
-        x = agenda(num, add, rank)
-        lista.append(x)
-                  
+    def __init__(self, nombre, telefono, direccion, empleo):
+        self.nombre = nombre
+        self.telefono = telefono
+        self.direccion = direccion
+        self.empleo = empleo
+
+    def __str__(self):
+        return f"\nNombre: {self.nombre} \nTel: {self.telefono} \nDir: {self.direccion} \nEmpleo: {self.empleo}"
+
+
+def añadir_contacto(lista):
+
+    nombre = input("INTRODUCE NOMBRE: ")
+    telefono = int(input("INTRODUCE NÚMERO DE TELÉFONO: "))
+    direccion = input("INTRODUCE DIRECCIÓN: ")
+    empleo = input("INTRODUCE EMPLEO: ")
+    contacto = Agenda(nombre, telefono, direccion, empleo)
+    lista.append(contacto)
+    print("Contacto añadido\n")
+
+lista = []
+
 while True:
-    lista = []
 
     print("\nSeleccione una opción")
     print("1. Para introducir un contacto")
@@ -37,8 +43,15 @@ while True:
 
     opcion = int(input("\n-----------------------------\nINTRODUCE UNA OPCIÓN: "))
 
-    if opcion == 1: agenda.añadirCONTACTO()
+    if opcion == 1:
+        añadir_contacto(lista)
 
-    if opcion == 5: 
-        for i in lista:
-            print(i)
+    if opcion == 2:
+        
+
+    elif opcion == 5:
+        for contacto in lista:
+            print(contacto)
+
+    elif opcion == 6:
+        break
