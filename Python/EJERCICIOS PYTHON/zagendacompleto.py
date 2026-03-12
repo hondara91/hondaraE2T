@@ -1,7 +1,18 @@
 import json
 
-with open("agenda.json", "r") as agenda: 
-    a = json.load(agenda)
+def cargar_agenda():
+    with open(input("INTRODUZCA NOMBRE DE LA AGENDA QUE QUIERE CARGAR: "), "r") as agenda:
+        a = json.load(agenda)
+    return a
+
+def guardar_agenda(a):
+    with open("agenda.json", "w") as agenda:
+        json.dump(a, agenda, indent = 4)
+
+agenda_cargada = cargar_agenda()
+
+
+
 
 class Contacto:
     def __init__(self, nombre, telefono, direccion, empleo):
@@ -134,5 +145,4 @@ class Agenda:
                 print("Opción no válida.\n")
 
 
-agenda = Agenda()
-agenda.menu()
+Agenda().menu()
