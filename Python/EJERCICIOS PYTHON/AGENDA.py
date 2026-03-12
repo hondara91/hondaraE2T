@@ -40,6 +40,16 @@ class Agenda:
 
     def __init__(self):
         self.lista = []
+        self.cargar_agenda()
+
+    #def cargar_agenda(self):
+        with open("Python/EJERCICIOS PYTHON/agenda.json", "r") as archivo:
+            miagenda = json.load(archivo)
+            return miagenda
+        
+    #def guardar_cambios(self):
+        with open("Python/EJERCICIOS PYTHON/agenda.json", "w") as archivo:
+            json.dump(self, archivo)
 
     def añadir_contacto(self):
         nombre = input("INTRODUCE NOMBRE: ")
@@ -73,6 +83,3 @@ class Agenda:
             elif opcion == 6:
                 break
 
-
-
-Agenda().menu()
