@@ -1,4 +1,14 @@
-{
-
-    
-}
+[
+    {
+        "nombre": "antoñico",
+        "telefono": "777",
+        "direccion": "enano marica",
+        "empleo": "marica"
+    },
+    {
+        "nombre": "juan pilas",
+        "telefono": "666",
+        "direccion": "culo",
+        "empleo": "retard"
+    }
+]
