@@ -93,16 +93,19 @@ class Agenda:
     def buscar_contacto(self):
         if len(self.lista) == 0: 
             print("No hay contactos guardados\n")
-        
+    
         else: 
             while True: 
                 buscar_nombre = input("INTRODUCE NOMBRE PARA BUSCAR: ").lower()
+                encontrado = False  
                 for contacto in self.lista:
                     if contacto.nombre.lower() == buscar_nombre: 
                         print(f"\nContacto encontrado\n {contacto} \n")
+                        encontrado = True  
                         break
             
-                    else: print("No se encontró ningún contacto con ese nombre.\n")
+                if not encontrado: 
+                    print("No se encontró ningún contacto con ese nombre.\n")
                 break
 
     def editar_contacto(self):
@@ -112,10 +115,11 @@ class Agenda:
         else:
             while True:
                 editar_nombre = input("INTRODUCE NOMBRE DEL CONTACTO A EDITAR: ").lower()
+                encontrado = False  
                 for contacto in self.lista:
                     if contacto.nombre.lower() == editar_nombre:
                         print(f"Contacto actual\n {contacto}\n")
-                        
+                    
                         contacto.nombre = input("NUEVO NOMBRE: ")
                         contacto.telefono = input("NUEVO TELÉFONO: ")
                         contacto.direccion = input("NUEVA DIRECCIÓN: ")
@@ -124,7 +128,9 @@ class Agenda:
                         self.lista.sort()
                         self.guardar_cambios()
                         print("Contacto editado correctamente")
-                
+                        encontrado = True  
+            
+                if not encontrado: 
                     print("No se encontró ningún contacto con ese nombre.\n")
                 break
 
@@ -135,14 +141,17 @@ class Agenda:
         else:
             while True:
                 eliminar_nombre = input("INTRODUCE EL NOMBRE DEL CONTACTO A ELIMINAR: ").lower()
+                encontrado = False  
                 for contacto in self.lista:
                     if contacto.nombre.lower() == eliminar_nombre:
                         self.lista.remove(contacto)
                         self.guardar_cambios()
                         print("\nContacto eliminado correctamente.\n")
+                        encontrado = True  
                         break
-                
-                    else: print("No se encontró ningún contacto con ese nombre.\n")
+            
+                if not encontrado:  
+                    print("No se encontró ningún contacto con ese nombre.\n")
                 break
  
     def menu(self):

@@ -10,5 +10,35 @@
         "telefono": "666",
         "direccion": "culo",
         "empleo": "retard"
+    },
+    {
+        "nombre": "Carlos García",
+        "telefono": "912345678",
+        "direccion": "Calle Principal 45, Madrid",
+        "empleo": "Ingeniero de Software"
+    },
+    {
+        "nombre": "María López",
+        "telefono": "634567890",
+        "direccion": "Avenida Central 12, Barcelona",
+        "empleo": "Diseñadora Gráfica"
+    },
+    {
+        "nombre": "Ahmed Hassan",
+        "telefono": "678901234",
+        "direccion": "Plaza Mayor 7, Valencia",
+        "empleo": "Médico"
+    },
+    {
+        "nombre": "Sofia Martínez",
+        "telefono": "645678901",
+        "direccion": "Calle del Sol 33, Sevilla",
+        "empleo": "Abogada"
+    },
+    {
+        "nombre": "Roberto Díaz",
+        "telefono": "656789012",
+        "direccion": "Paseo de la República 20, Bilbao",
+        "empleo": "Electricista"
     }
 ]

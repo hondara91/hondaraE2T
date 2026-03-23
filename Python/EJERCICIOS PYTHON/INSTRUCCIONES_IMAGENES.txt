@@ -1,0 +1,70 @@
+================== INSTRUCCIONES PARA DESCARGAR IMÁGENES ==================
+
+PASO 1: INSTALAR PIL (PILLOW)
+------------------------------
+Abre PowerShell y ejecuta:
+pip install pillow
+
+PASO 2: DESCARGAR IMÁGENES
+---------------------------
+Las imágenes deben guardarse en la carpeta: "assets"
+
+Rutas esperadas:
+- assets/personaje.png     (chica rubia - 100x130 px aprox)
+- assets/enemigo.png       (enemigo - 50x50 px aprox)
+- assets/moneda.png        (moneda - 30x30 px aprox)
+
+PASO 3: DESCARGAR RECURSOS RECOMENDADOS
+---------------------------------------
+
+OPTION A - Descargar packs completos (RECOMENDADO):
+1. Ve a: https://itch.io/game-assets/pixel-art
+2. Busca: "platform game assets" o "2D game characters"
+3. Descarga un pack gratuito
+4. Extrae las imágenes PNG en la carpeta "assets/"
+
+OPTION B - Sitios específicos:
+- OpenGameArt.org: https://opengameart.org/
+- Kenney Assets: https://kenney.nl/assets
+- Pixilart: https://www.pixilart.com/
+
+OPCION C - Crear tus propias imágenes:
+- Usa Aseprite (pago), Piskel (gratis), o Pyxel Edit
+- Guarda como PNG en la carpeta "assets/"
+
+PASO 4: ASEGÚRATE QUE LAS IMÁGENES SEAN:
+- Formato PNG con transparencia
+- Tamaño aproximado:
+  * Personaje: 100x130 píxeles
+  * Enemigo: 50x50 píxeles
+  * Moneda: 30x30 píxeles
+
+PASO 5: EL JUEGO CARGARÁ LAS IMÁGENES AUTOMÁTICAMENTE
+Si PIL está instalado y las imágenes existen, las usará.
+Si no existen, usará los dibujos en canvas como fallback.
+
+==================== ARCHIVOS DESCARGABLES GRATUITOS ====================
+
+Recomendación personal:
+- Itch.io "Tiny Kingdom" - Excelente para principiantes
+- Kenney "Tiny Platformer" - Tiene sprites de personajes listos
+
+Busca packs que incluyan:
+✓ Personaje principal 
+✓ Enemigos/NPCs
+✓ Items (monedas, etc)
+✓ Decoración
+
+==================== ¿CÓMO RENOMBRAR LAS IMÁGENES? ====================
+
+Una vez descargadas:
+1. Extrae las imágenes más importantes
+2. Renómbralas a:
+   - personaje.png
+   - enemigo.png
+   - moneda.png
+3. Colócalas en la carpeta "assets/"
+
+¡Listo! El juego las cargará automáticamente.
+
+==========================================================================
